@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="back/"> Retour</a>
+    <li><b>notes:  </b> <ul>
+        {% for e in notes  %}
+        
+       <li>TP{{forloop.counter}}: {% if e == 0 %}
+        <span style="color: red;">absence </span> 
+        {% else %}
+        {{ e|floatformat:2}}
+        {% endif %}
+      </li> 
+
+       {% empty %} 
+         pas de notes 
+
+       {% endfor %}
+</body>
+</html>

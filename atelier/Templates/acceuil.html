@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atelier Django</h1>
+    <h4> {% now "l j E Y " %} </h4>
+    <hr>
+    {% if sexe == 'f' %}
+       Mademoiselle
+    {% else %}
+       Monsieur
+    {% endif %}
+
+    Nada Haoues
+    <ul>
+        <li><b>age: </b>{{age}}</li>
+
+        <li><b>sexe: </b>{{sexe}}</li>
+        <li><b>addresse: </b>{{addresse}}</li>
+        <li><b>age: </b>{{age}}</li>
+        <li><b>classe: </b>{{classe | upper}}</li>
+        <li><b>notes:  </b> <ul>
+            <!-- {% for e in notes  %}
+            
+           <li>TP{{forloop.counter}}: {{ e|floatformat:2}}</li> 
+           {% endfor %} -->
+           <a href="notes/">Cliquez ici</a>
+           
+        </ul>
+        </li>
+        
+    </ul>
+</body>
+</html>
